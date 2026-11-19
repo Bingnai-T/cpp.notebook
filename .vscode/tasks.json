@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "编译并运行",
+      "type": "shell",
+      "command": "& \"C:\\Users\\32763\\AppData\\Local\\Microsoft\\WinGet\\Packages\\BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\mingw64\\bin\\g++.exe\" -std=c++17 -fexec-charset=GBK \"${file}\" -o \"C:\\Users\\32763\\cpp-build\\${fileBasenameNoExtension}.exe\"; if ($LASTEXITCODE -eq 0) { & \"C:\\Users\\32763\\cpp-build\\${fileBasenameNoExtension}.exe\" }",
+      "options": {
+        "shell": {
+          "executable": "powershell.exe",
+          "args": ["-NoProfile", "-Command"]
+        }
+      },
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "shared" },
+      "detail": "编译当前文件到英文目录（规避中文路径问题），中文正常显示，然后运行"
+    }
+  ]
+}
